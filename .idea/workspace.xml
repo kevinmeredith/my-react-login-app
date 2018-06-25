@@ -14,8 +14,8 @@
       <file leaf-file-name="Component1.re" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Component1.re">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="288">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -23,8 +23,8 @@
       <file leaf-file-name="Login.re" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Login.re">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            <state relative-caret-position="90">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -32,7 +32,7 @@
       <file leaf-file-name="Component2.re" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Component2.re">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-374">
               <caret column="23" selection-start-column="23" selection-end-column="23" />
             </state>
           </provider>
@@ -233,22 +233,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Component1.re">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="288">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Component2.re">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-374">
           <caret column="23" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Login.re">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        <state relative-caret-position="90">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>

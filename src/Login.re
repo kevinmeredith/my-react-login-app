@@ -1,9 +1,8 @@
 /* State declaration */
-type state = {
-  remainingAttempts: option (int)
-};
-
-type t = A of int | B of float | C of string
+type state =
+ | NoInfo
+ | RemainingAttemptsKnown int
+ | ShowErrorMessage string;
 
 /* Action declaration */
 type action =
@@ -26,7 +25,7 @@ let make = (~greeting, _children) => {
   /* State transitions */
   reducer: (action, state) =>
     switch (action) {
-    | ProceedToApp => ???
+    | NoInfo => ???
     | CommentOnRemainingAttempts numberLeft => ReasonReact.Update({...state, remainingAttempts: Some numberLeft})
     },
 
