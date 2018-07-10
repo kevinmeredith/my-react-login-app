@@ -1,59 +1,25 @@
-/* State declaration */
-type state =
- | NoInfo
- | RemainingAttemptsKnown int
- | ShowErrorMessage string;
+/* This is the basic component. */
+let component = ReasonReact.statelessComponent("Login");
 
-/* Action declaration */
-type action =
-  | ProceedToApp /* Succesfully logged into app. */
-  | CommentOnRemainingAttempts int
-  | InformUserIsLockedOut;  /* Server notes that user's account is in a bad state such that he/she must be kicked out. */
+let handleClick = (_event, _self) => Js.log("clicked!");
+ 
+/* `make` is the function that mandatorily takes `children` (if you want to use
+   `JSX). `message` is a named argument, which simulates ReactJS props. Usage:
 
-/* Component template declaration.
-   Needs to be **after** state and action declarations! */
-let component = ReasonReact.reducerComponent("Login");
+   `<Page message="hello" />`
 
-/* greeting and children are props. `children` isn't used, therefore ignored.
-   We ignore it by prepending it with an underscore */
-let make = (~greeting, _children) => {
-  /* spread the other default fields of component here and override a few */
+   Which desugars to
+
+   `ReasonReact.element(Page.make(~message="hello", [||]))`*/
+let make = (~message, _children) => {
   ...component,
-
-  initialState: () => {count: 0, show: true},
-
-  /* State transitions */
-  reducer: (action, state) =>
-    switch (action) {
-    | NoInfo => ???
-    | CommentOnRemainingAttempts numberLeft => ReasonReact.Update({...state, remainingAttempts: Some numberLeft})
-    },
-
-  render: self => {
-    let message =
-      "You've clicked this " ++ string_of_int(self.state.count) ++ " times(s)";
+  render: self =>
     <div>
-      <button onClick=(_event => self.send(Click))>
-        (ReasonReact.string(message))
-      </button>
+      <span>(ReasonReact.string("Login"))</span>
+      <input type_="text"/>
+      <input type_="password"/>
       <button onClick=(_event => self.send(Toggle))>
-        (ReasonReact.string("Toggle greeting"))
-      </button>
-      (self.state.show ? ReasonReact.string(greeting) : ReasonReact.null)
-    </div>;
-  },
+        (ReasonReact.string("Submit"))
+      </button>    
+    </div>
 };
-
-
-/*let make = (~message, _children) => {*/
-  /*...component,*/
-  /*render: self =>*/
-       /*<form>*/
-        /*<label for="username">Username</label>*/
-        /*<input type="text" name="Username" id="username">*/
-        /*<label for="password">Password</label>*/
-        /*<input type="password" name="Password" id="password"    >*/
-       /*</form>*/
-
-   /*<div onClick=(self.handle(handleClick))> (ReasonReact.string(message)) </div>,*/
-/*};*/
